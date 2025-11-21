@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>FutureLink - Rede Profissional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =================== TELA DE LOGIN / CADASTRO =================== -->
+<div class="login-container" id="loginScreen">
+    <h2>Bem-vindo ao FutureLink</h2>
+    <p>Crie sua conta para acessar a plataforma</p>
+
+    <form id="cadastroForm" class="login-form">
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Senha</label>
+        <input type="password" name="senha" required>
+
+        <label>Nome</label>
+        <input type="text" name="nome" required>
+
+        <label>Gênero</label>
+        <select name="genero" required>
+        <option value="">Selecione...</option>
+        <option value="feminino">Feminino</option>
+        <option value="masculino">Masculino</option>
+        <option value="outro">Outro / Prefiro não dizer</option>
+        </select>
+
+        <label>Cidade</label>
+        <input type="text" name="cidade" required>
+
+        <label>Formação</label>
+        <input type="text" name="formacao" required>
+
+        <label>Skills</label>
+        <input type="text" name="skills" placeholder="Ex: HTML, CSS, Python" required>
+
+        <label>Experiências</label>
+        <textarea name="experiencias" rows="3" required></textarea>
+
+        <label>Soft Skills</label>
+        <textarea name="softskills" rows="3" required></textarea>
+
+        <label>Hobbies</label>
+        <input type="text" name="hobbies" required>
+
+        <button type="submit">Criar Perfil</button>
+    </form>
+</div>
+
+<header>
+    <h1>FutureLink</h1>
+    <button id="logoutBtn" style="display:none;" class="logout-btn">Sair</button>
+</header>
+
+<section class="hero">
+    <h2>Conectando Talentos para o Futuro do Trabalho</h2>
+    <p>Profissionais de diversas áreas reunidos em uma plataforma colaborativa.</p>
+</section>
+
+
+<h2 class="titulo">Profissionais em Destaque</h2>
+
+<section class="grid">
+
+    <!-- CARD 1 -->
+    <div class="card">
+        <img src="imgs/ana-silva.jpg" alt="">
+        <h3>Ana Silva</h3>
+        <p>Desenvolvedora Front-End</p>
+        <p class="skills"><strong>Skills:</strong> HTML, CSS, JS</p>
+        <a href="#ana" class="btn">Ver Perfil</a>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card">
+        <img src="imgs/bruno.jpg" alt="">
+        <h3>Bruno Costa</h3>
+        <p>UX/UI Designer</p>
+        <p class="skills"><strong>Skills:</strong> Figma, UI, Prototipagem</p>
+        <a href="#bruno" class="btn">Ver Perfil</a>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+        <img src="imgs/carla.jpg" alt="">
+        <h3>Carla Mendes</h3>
+        <p>Analista de Dados</p>
+        <p class="skills"><strong>Skills:</strong> Python, SQL, PowerBI</p>
+        <a href="#carla" class="btn">Ver Perfil</a>
+    </div>
+
+    <div class="card">
+        <img src="imgs/rodrigo.webp" alt="">
+        <h3>Rodrigo Ferreira</h3>
+        <p>Engenheiro de Software Sênior</p>
+        <p class="skills"><strong>Skills:</strong> Java, DevOps, APIs REST</p>
+        <a href="#rodrigo" class="btn">Ver Perfil</a>
+    </div>
+
+    <div class="card">
+        <img src="imgs/anna.jpg" alt="">
+        <h3>Anna Ribeiro</h3>
+        <p>Desenvolvedora Full-Stack</p>
+        <p class="skills"><strong>Skills:</strong>JavaScript, React, Node.js</p>
+        <a href="#anna" class="btn">Ver Perfil</a>
+    </div>
+
+     <div class="card">
+        <img src="imgs/bruno2.jpg" alt="">
+        <h3>Bruno Almeida</h3>
+        <p>Desenvolvedor Back-End</p>
+        <p class="skills"><strong>Skills:</strong>APIs REST, Banco de Dados, Python/Java</p>
+        <a href="#bruno2" class="btn">Ver Perfil</a>
+    </div>
+
+    <div class="card">
+        <img src="imgs/daniela.webp" alt="">
+        <h3>Daniela Castro</h3>
+        <p>UI/UX Designer</p>
+        <p class="skills"><strong>Skills:</strong>Interface, Prototipação, Pesquisa</p>
+        <a href="#daniela" class="btn">Ver Perfil</a>
+    </div>
+
+    <div class="card">
+        <img src="imgs/eduardo.jpg" alt="">
+        <h3>Eduardo Lima</h3>
+        <p>Engenheiro de Software</p>
+        <p class="skills"><strong>Skills:</strong>Arquitetura, DevOps, Metodologias Ágeis</p>
+        <a href="#eduardo" class="btn">Ver Perfil</a>
+    </div>
+
+    <div class="card">
+        <img src="imgs/fernanda.webp" alt="">
+        <h3>Fernanda Souza</h3>
+        <p>Analista de Dados</p>
+        <p class="skills"><strong>Skills:</strong>Power BI, SQL, ETL</p>
+        <a href="#fernanda" class="btn">Ver Perfil</a>
+    </div>
+
+    <div class="card">
+        <img src="imgs/gustavo.jpg" alt="">
+        <h3>Gustavo Martins</h3>
+        <p>Especialista em Segurança de Informação</p>
+        <p class="skills"><strong>Skills:</strong>Vulnarabilidades, Redes, Criptografia</p>
+        <a href="#gustavo" class="btn">Ver Perfil</a>
+    </div>
+
+
+
+</section>
+
+<!-- ---------------- MODAIS USANDO :target ---------------- -->
+
+<!-- MODAL ANA -->
+<div id="ana" class="modal">
+  <div class="modal-content">
+      <a href="#" class="close">x</a>
+      <h2>Ana Silva</h2>
+      <p><strong>Cidade:</strong> São Paulo</p>
+      <p><strong>Formação:</strong> ADS - FIAP</p>
+
+      <h3>Experiências</h3>
+      <ul>
+          <li>Desenvolvimento Front-End</li>
+          <li>UX Básico</li>
+          <li>Integração com APIs</li>
+      </ul>
+
+      <h3>Soft Skills</h3>
+      <ul>
+          <li>Criatividade</li>
+          <li>Comunicação</li>
+          <li>Proatividade</li>
+      </ul>
+
+      <h3>Hobbies</h3>
+      <p>Desenho, Café especial</p>
+
+      <div class="actions">
+        <form>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+        </form>
+        <button type="submit">Recomendar</button>
+      </div>
+  </div>
+</div>
+
+<!-- MODAL BRUNO -->
+<div id="bruno" class="modal">
+  <div class="modal-content">
+      <a href="#" class="close">x</a>
+      <h2>Bruno Costa</h2>
+      <p><strong>Cidade:</strong> Rio de Janeiro</p>
+      <p><strong>Formação:</strong> Design Digital</p>
+
+      <h3>Experiências</h3>
+      <ul>
+          <li>Design de Aplicativos</li>
+          <li>Pesquisa com Usuários</li>
+          <li>Prototipagem</li>
+      </ul>
+
+      <h3>Soft Skills</h3>
+      <ul>
+          <li>Empatia</li>
+          <li>Organização</li>
+          <li>Pensamento Crítico</li>
+      </ul>
+
+      <h3>Hobbies</h3>
+      <p>Fotografia, Ciclismo</p>
+
+      <div class="actions">
+        <form>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+        </form>
+        <button type="submit">Recomendar</button>
+      </div>
+  </div>
+</div>
+
+<!-- MODAL CARLA -->
+<div id="carla" class="modal">
+  <div class="modal-content">
+      <a href="#" class="close">x</a>
+      <h2>Carla Mendes</h2>
+      <p><strong>Cidade:</strong> Curitiba</p>
+      <p><strong>Formação:</strong> Engenharia de Dados</p>
+
+      <h3>Experiências</h3>
+      <ul>
+          <li>Machine Learning</li>
+          <li>SQL Avançado</li>
+          <li>Visualização de Dados</li>
+      </ul>
+
+      <h3>Soft Skills</h3>
+      <ul>
+          <li>Raciocínio lógico</li>
+          <li>Gestão de Tempo</li>
+          <li>Detalhismo</li>
+      </ul>
+
+      <h3>Hobbies</h3>
+      <p>xadrez, leitura</p>
+
+      <div class="actions">
+        <form>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+        </form>
+        <button type="submit">Recomendar</button>
+      </div>
+  </div>
+</div>
+
+<div id="rodrigo" class="modal">
+  <div class="modal-content">
+      <a href="#" class="close">x</a>
+      <h2>Rodrigo Ferreira</h2>
+      <p><strong>Cidade:</strong> São Paulo</p>
+      <p><strong>Formação:</strong> Ciência da Computação</p>
+
+      <h3>Experiências</h3>
+      <ul>
+          <li>Desenvolvimento de Software</li>
+          <li>Lideranaça de Equipe</li>
+          <li>Integração com APIs</li>
+      </ul>
+
+      <h3>Soft Skills</h3>
+      <ul>
+          <li>Lideranaça</li>
+          <li>Comunicação</li>
+          <li>Proatividade</li>
+      </ul>
+
+      <h3>Hobbies</h3>
+      <p>Leitura, Corrida</p>
+
+      <div class="actions">
+        <form>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+        </form>
+        <button type="submit">Recomendar</button>
+      </div>
+  </div>
+</div>
+
+<div id="anna" class="modal">
+  <div class="modal-content">
+      <a href="#" class="close">x</a>
+      <h2>Anna Ribeiro</h2>
+      <p><strong>Cidade:</strong> São Paulo</p>
+      <p><strong>Formação:</strong> Desenvolvimento Full-Stack</p>
+
+      <h3>Experiências</h3>
+      <ul>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+      </ul>
+
+      <h3>Soft Skills</h3>
+      <ul>
+          <li>Trabalho em equipe</li>
+          <li>Comunicação</li>
+          <li>Proatividade</li>
+      </ul>
+
+      <h3>Hobbies</h3>
+      <p>Corrida, séries</p>
+
+      <div class="actions">
+        <form>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+        </form>
+        <button type="submit">Recomendar</button>
+      </div>
+  </div>
+</div>
+
+<div id="bruno2" class="modal">
+  <div class="modal-content">
+      <a href="#" class="close">x</a>
+      <h2>Bruno Almeida</h2>
+      <p><strong>Cidade:</strong> Porto Alegre</p>
+      <p><strong>Formação:</strong>Ciência da computação</p>
+
+      <h3>Experiências</h3>
+      <ul>
+          <li>Back-End</li>
+          <li>Banco de Dados</li>
+          <li>APIs Rest</li>
+      </ul>
+
+      <h3>Soft Skills</h3>
+      <ul>
+          <li>Pensamento Analítico</li>
+          <li>Resolução de problemas</li>
+          <li>Responsabilidade</li>
+      </ul>
+
+      <h3>Hobbies</h3>
+      <p>Futebol, podcasts</p>
+
+      <div class="actions">
+        <form>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+        </form>
+        <button type="submit">Recomendar</button>
+      </div>
+  </div>
+</div>
+
+<div id="daniela" class="modal">
+  <div class="modal-content">
+      <a href="#" class="close">x</a>
+      <h2>Daniela Castro</h2>
+      <p><strong>Cidade:</strong>Salvador</p>
+      <p><strong>Formação:</strong>UX/UI Design</p>
+
+      <h3>Experiências</h3>
+      <ul>
+          <li>Design de Interfaces</li>
+          <li>Prototipação</li>
+          <li>Pesquisa com usuários</li>
+      </ul>
+
+      <h3>Soft Skills</h3>
+      <ul>
+          <li>Empatia</li>
+          <li>Criatividade</li>
+          <li>Comunicação visual</li>
+      </ul>
+
+      <h3>Hobbies</h3>
+      <p>fotografia, artes digitais</p>
+
+      <div class="actions">
+        <form>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+        </form>
+        <button type="submit">Recomendar</button>
+      </div>
+  </div>
+</div>
+
+<div id="eduardo" class="modal">
+  <div class="modal-content">
+      <a href="#" class="close">x</a>
+      <h2>Eduardo Lima</h2>
+      <p><strong>Cidade:</strong>Belo Horizonte</p>
+      <p><strong>Formação:</strong>Engenharia de Software</p>
+
+      <h3>Experiências</h3>
+      <ul>
+          <li>Arquitetura da Software</li>
+          <li>DevOps</li>
+          <li>Metodologias Ágeis</li>
+      </ul>
+
+      <h3>Soft Skills</h3>
+      <ul>
+          <li>Liderança</li>
+          <li>Organização</li>
+          <li>Tomada de decisão</li>
+      </ul>
+
+      <h3>Hobbies</h3>
+      <p>trilhas, guitarra</p>
+
+      <div class="actions">
+        <form>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+        </form>
+        <button type="submit">Recomendar</button>
+      </div>
+  </div>
+</div>
+
+<div id="fernanda" class="modal">
+  <div class="modal-content">
+      <a href="#" class="close">x</a>
+      <h2>Fernada Souza</h2>
+      <p><strong>Cidade:</strong>Recife</p>
+      <p><strong>Formação:</strong>Análise de Dados</p>
+
+      <h3>Experiências</h3>
+      <ul>
+          <li>Power BI</li>
+          <li>SQL</li>
+          <li>ETL</li>
+      </ul>
+
+      <h3>Soft Skills</h3>
+      <ul>
+          <li>Atenção aos detalhes</li>
+          <li>Organização</li>
+          <li>Boa comunicação</li>
+      </ul>
+
+      <h3>Hobbies</h3>
+      <p>cozinha, cinema</p>
+
+      <div class="actions">
+        <form>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+        </form>
+        <button type="submit">Recomendar</button>
+      </div>
+  </div>
+</div>
+
+<div id="gustavo" class="modal">
+  <div class="modal-content">
+      <a href="#" class="close">x</a>
+      <h2>Gustavo Martins</h2>
+      <p><strong>Cidade:</strong>Florianópolis</p>
+      <p><strong>Formação:</strong>Segurança da Informção</p>
+
+      <h3>Experiências</h3>
+      <ul>
+          <li>Análise de Vulnerabilidades</li>
+          <li>Firewall e Redes</li>
+          <li>Criptografia</li>
+      </ul>
+
+      <h3>Soft Skills</h3>
+      <ul>
+          <li>Pensamento Crítico</li>
+          <li>Calma sob pressão</li>
+          <li>Documentação clara</li>
+      </ul>
+
+      <h3>Hobbies</h3>
+      <p>games, tecnologias</p>
+
+      <div class="actions">
+        <form>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+        </form>
+        <button type="submit">Recomendar</button>
+      </div>
+  </div>
+</div>
+
+<!-- CARD DO USUÁRIO (GERADO VIA JS) -->
+<div class="card" id="userCard" style="display:none;">
+    <img id="userImg" src="imgs/user-defaut.png" alt="" />
+    <h3 id="userCardName"></h3>
+    <p id="userCardFuncao"></p>
+    <p class="skills"><strong>Skills:</strong> <span id="userCardSkills"></span></p>
+    <a href="#perfilCriado" class="btn">Ver Meu Perfil</a>
+</div>
+
+
+<!-- ---------------- QUIZ SEM JAVASCRIPT ---------------- -->
+<section class="quiz">
+    <h2>Quiz - Mercado de Trabalho</h2>
+
+    <div class="pergunta">
+        <p><strong>1.</strong>Qual a linguagem mais utilizada no Front-End?</p>
+        <label class="alternativa">
+            <input type="radio" name="q1">
+            HTML
+            <span class="errado">X Resposta incorreta</span>
+        </label>
+
+        <label class="alternativa">
+            <input type="radio" name="q1" class="correta">
+            JavaScript
+            <span class="certo"> ✔ Resposta correta</span>
+        </label>
+
+        <label class="alternativa">
+            <input type="radio" name="q1">
+            Python
+            <span class="errado">X Respoata incorreta</span>
+        </label>
+    </div>
+
+    <div class="pergunta">
+        <p><strong>2.</strong>Qual cidade é o maior polo tecnológico pelo Brasil?</p>
+
+        <label class="alternativa">
+            <input type="radio" name="q2">
+            Florianópolis
+            <span class="errado">X Resposta incorreta</span>
+        </label>
+
+        <label class="alternativa">
+            <input type="radio" name="q2" class="correto">
+            São Paulo
+            <span class="certo">✔ Resposta correta</span>
+        </label>
+
+        <label class="alternativa">
+            <input type="radio" name="q2">
+            Recife
+            <span class="errado">X Resposta incorreta</span>
+        </label>
+    </div>
+
+    <div class="pergunta">
+        <p><strong>3.</strong>Qual área da tecnologia atualmente possui maior demanda no mercado?</p>
+
+        <label class="alternativa">
+            <input type="radio" name="q3" class="correta">
+            Desenvolvimento Full-Stack
+            <span class="certo">✔ Resposta correta</span>
+        </label>
+
+        <label class="alternativa">
+            <input type="radio" name="q3">
+            Suporte Técnico
+            <span class="errado">X Resposta incorreta</span>
+        </label>
+
+        <label class="alternativa">
+            <input type="radio" name="q3">
+            Manutenção de Hardware
+            <span class="errado">X Resposta incorreta</span>
+        </label>
+    </div>
+
+    <div class="pergunta">
+        <p><strong>4.</strong>Qual área paga os salários mais altos na tecnologia?</p>
+
+        <label class="alternativa">
+            <input type="radio" name="q4" class="correta">
+            Inteligência Artificial e Machine Learning
+            <span class="certo">✔ Resposta correta</span>
+        </label>
+
+        <label class="alternativa">
+            <input type="radio" name="q4">
+            Teste de Software
+            <span class="errado">X Resposta incorreta</span>
+        </label>
+
+        <label class="alternativa">
+            <input type="radio" name="q4">
+            Infraestrutura de Redes
+            <span class="errado">X Resposta incorreta</span>
+        </label>
+    </div>
+</section>
+
+<!-- MODAL DO PERFIL GERADO -->
+<div id="perfilCriado" class="modal">
+    <div class="modal-content">
+        <a href="#" class="close">x</a>
+        <img id="perfilFoto" src="imgs/user-default.png" style="width:120px; border-radius:10px; margin-bottom:20px;">
+        <h2 id="perfilNome">Nome</h2>
+
+        <p><strong>Cidade:</strong> <span id="perfilCidade"></span></p>
+        <p><strong>Formação:</strong> <span id="perfilFormacao"></span></p>
+
+        <h3>Skills</h3>
+        <p id="perfilSkills"></p>
+
+        <h3>Experiências</h3>
+        <p id="perfilExperiencias"></p>
+
+        <h3>Soft Skills</h3>
+        <p id="perfilSoftskills"></p>
+
+        <h3>Hobbies</h3>
+        <p id="perfilHobbies"></p>
+    </div>
+</div>
+
+
+<footer>
+  <p>FutureLink © 2025</p>
+</footer>
+<script>
+function carregarPerfil() {
+    const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+    if (!usuario) {
+        // Se não estiver logado, MOSTRA apenas o login
+        document.getElementById("loginScreen").style.display = "block";
+
+        // Esconde todo o conteúdo do site
+        document.querySelector("header").style.display = "none";
+        document.querySelector(".hero").style.display = "none";
+        document.querySelector(".titulo").style.display = "none";
+        document.querySelector(".grid").style.display = "none";
+        document.querySelector(".quiz").style.display = "none";
+        document.querySelector("footer").style.display = "none";
+
+        return;
+    }
+
+    // ------- SE O USUÁRIO EXISTE -------
+    let foto = "imgs/user-default.png";
+    if (usuario.genero === "feminino") foto = "imgs/user-mulher.png";
+    if (usuario.genero === "masculino") foto = "imgs/user-homem.png";
+
+    document.getElementById("perfilNome").textContent = usuario.nome;
+    document.getElementById("perfilCidade").textContent = usuario.cidade;
+    document.getElementById("perfilFormacao").textContent = usuario.formacao;
+    document.getElementById("perfilSkills").textContent = usuario.skills;
+    document.getElementById("perfilExperiencias").textContent = usuario.experiencias;
+    document.getElementById("perfilSoftskills").textContent = usuario.softskills;
+    document.getElementById("perfilHobbies").textContent = usuario.hobbies;
+    document.getElementById("perfilFoto").src = foto;
+
+    document.getElementById("userCardName").textContent = usuario.nome;
+    document.getElementById("userCardFuncao").textContent = usuario.formacao;
+    document.getElementById("userCardSkills").textContent = usuario.skills;
+    document.getElementById("userImg").src = foto;
+
+    // Mostra conteúdo do site
+    document.querySelector("header").style.display = "block";
+    document.querySelector(".hero").style.display = "block";
+    document.querySelector(".titulo").style.display = "block";
+    document.querySelector(".grid").style.display = "flex";
+    document.querySelector(".quiz").style.display = "block";
+    document.querySelector("footer").style.display = "block";
+
+    document.getElementById("userCard").style.display = "block";
+    document.getElementById("logoutBtn").style.display = "block";
+
+    // Esconde login
+    document.getElementById("loginScreen").style.display = "none";
+}
+
+
+document.getElementById("cadastroForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const form = new FormData(e.target);
+
+    const usuario = {
+        email: form.get("email"),
+        senha: form.get("senha"),
+        nome: form.get("nome"),
+        cidade: form.get("cidade"),
+        formacao: form.get("formacao"),
+        skills: form.get("skills"),
+        experiencias: form.get("experiencias"),
+        softskills: form.get("softskills"),
+        hobbies: form.get("hobbies"),
+        genero: form.get("genero")
+    };
+
+    // Salvar no navegador
+    localStorage.setItem("usuario", JSON.stringify(usuario));
+
+    // Exibir perfil
+    carregarPerfil();
+
+    // Abrir modal
+    location.href = "#perfilCriado";
+});
+
+// Botão Sair
+document.getElementById("logoutBtn").addEventListener("click", function () {
+    localStorage.removeItem("usuario");
+    location.reload();
+});
+
+// Carrega sessão automaticamente
+window.onload = carregarPerfil;
+</script>
+
+
+</body>
+</html>
